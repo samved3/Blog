@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<div>
+<h1 style="color:#1abc9c">Home</h1>
+</div>
+
+  <% currentHome.forEach(function(arrayElement){let temp = arrayElement.content; temp=temp.substring(0,100); %>
+<hr>
+<h1> <%=arrayElement.title%></h1>
+<p >  <%= temp+ "..." %> <a href="/posts/<%=arrayElement.title%>"> Read more</a> </p>
+<% }) %>
+
+<%- include('partials/footer') %>
